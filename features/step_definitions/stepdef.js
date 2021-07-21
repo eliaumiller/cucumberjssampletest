@@ -82,7 +82,7 @@ When('yet another action', function () {
 
 Then('I don\'t see something else', function () {
            // Write code here that turns the phrase above into concrete actions
-    assert.notEqual(1, -1);
+    assert.strictEqual(1, -1);
 });
 
          
@@ -100,7 +100,7 @@ When('we calculate the feeding requirements', function () {
            // Write code here that turns the phrase above into concrete actions
   // this.showError = checkEnergy(null);
   
-  this.actual = checkEnergy(this.weighs);
+  this.actual = checkEnergy(null);
   
 });
 
