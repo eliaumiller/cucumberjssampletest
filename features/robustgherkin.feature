@@ -1,8 +1,9 @@
-@billing @bicker @annoy
+#Auto generated Octane revision tag
+@BSPID1001REV0.2.0
 Feature: Some terse yet descriptive text of what is desired like bla bla
-A description with
-multiple
-lines
+  A description with
+  multiple
+  lines
 
   Background:
     Given a global administrator named "Greg"
@@ -12,9 +13,6 @@ lines
   @Quick @full @annoy
   Scenario: Some determinable business situation
     Given the following people exist:
-      | name  | email           | phone |
-      | Aila  | aila@email.com  | 123   |
-      | Joe   | joe@email.com   | 234   |
     And some precondition 1
     When some action by the actor
     And some other action
@@ -22,19 +20,15 @@ lines
     And something else we can check happens too
 
   @Quick @nightly
-  Scenario: Some another scenario 2
+  Example: Some another scenario 2
   scenario 2 description
     Given some precondition
     And some other precondition with doc string
-    """
-    this is comment
-    """
     When some action by the actor
     And yet another action
     Then some testable outcome is achieved
     * something else we can check happens too
     But I don't see something else
-
 
   Scenario Outline: feeding a cow <name> yum yum yum
   scenario outline
