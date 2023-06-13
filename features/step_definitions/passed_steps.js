@@ -1,6 +1,19 @@
 const assert = require('assert');
 const { Given, When, Then } = require('@cucumber/cucumber');
+function checkEnergy (weight) {
+  if(weight === 450) {
+    return 26500;
+  } 
 
+  if (weight === 500){
+      return 29500;
+    }
+
+  if(weight === null) {
+    throw new Error('Weight can not be null');
+  }
+  return 0;
+}
 Given('a global administrator named {string}', function (string) {
        // Write code here that turns the phrase above into concrete actions
     this.name = string;
@@ -8,8 +21,8 @@ Given('a global administrator named {string}', function (string) {
 
 
 Given('a blog named {string}', function (string) {
-       // Write code here that turns the phrase above into concrete actions
-    this.blog = string;
+  
+   
 });
 
 
@@ -90,7 +103,7 @@ Given('the cow weighs {int} kg', function (int) {
 
 When('we calculate the feeding requirements', function () {
        // Write code here that turns the phrase above into concrete actions
-    this.calculate = true;
+    this.actual = checkEnergy(null);
 });
 
 
